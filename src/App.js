@@ -1,10 +1,10 @@
-import CustomerFilter from "./components/CustomerFilter";
-import CustomersContext from "./store/customers-context";
+import CustomerFilter from './components/CustomerFilter';
+import CustomersContext from './store/customers-context';
 
 const DUMMY_CUSTOMERS = [
-  { id: "c1", name: "Дмитрий" },
-  { id: "c2", name: "Михаил" },
-  { id: "c3", name: "Ирина" },
+  { id: 'c1', name: 'Дмитро' },
+  { id: 'c2', name: 'Михайло' },
+  { id: 'c3', name: 'Ірина' },
 ];
 
 function App() {

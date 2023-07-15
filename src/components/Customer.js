@@ -1,9 +1,9 @@
-import { Component } from "react";
-import styles from "./Customer.module.css";
+import { Component } from 'react';
+import styles from './Customer.module.css';
 
 class Customer extends Component {
   componentWillUnmount() {
-    console.log("Заказчик будет удалён!");
+    console.log('Замовник буде видалено!');
   }
 
   render() {
