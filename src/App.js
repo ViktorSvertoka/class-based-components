@@ -1,21 +1,24 @@
-import CustomerFilter from './components/CustomerFilter';
-import CustomersContext from './store/customers-context';
-
-const DUMMY_CUSTOMERS = [
-  { id: 'c1', name: 'Дмитро' },
-  { id: 'c2', name: 'Михайло' },
-  { id: 'c3', name: 'Ірина' },
-];
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const customersContext = {
-    customers: DUMMY_CUSTOMERS,
-  };
-
   return (
-    <CustomersContext.Provider value={customersContext}>
-      <CustomerFilter />
-    </CustomersContext.Provider>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
