@@ -1,0 +1,8 @@
+.filter {
+  margin: 3rem auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 35rem;
+  text-align: center;
+}
