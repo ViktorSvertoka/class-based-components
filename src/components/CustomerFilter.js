@@ -1,8 +1,8 @@
-import { Fragment, useState, useEffect, Component } from 'react';
-import Customers from './Customers';
-import styles from './CustomerFilter.module.css';
-import CustomersContext from '../store/customers-context';
-import ErrorBoundary from './ErrorBoundary';
+import { Fragment, Component } from "react";
+import Customers from "./Customers";
+import styles from "./CustomerFilter.module.css";
+import CustomersContext from "../store/customers-context";
+import ErrorBoundary from "./ErrorBoundary";
 
 class CustomerFilter extends Component {
   static contextType = CustomersContext;
@@ -11,7 +11,7 @@ class CustomerFilter extends Component {
     super();
     this.state = {
       filteredCustomers: [],
-      filter: '',
+      filter: "",
     };
   }
 
@@ -25,7 +25,7 @@ class CustomerFilter extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.filter !== this.state.filter) {
       this.setState({
-        filteredCustomers: this.context.customers.filter(customer =>
+        filteredCustomers: this.context.customers.filter((customer) =>
           customer.name.includes(this.state.filter)
         ),
       });
