@@ -1,7 +1,7 @@
-import { Component } from "react";
-import Customer from "./Customer";
+import { Component } from 'react';
+import Customer from './Customer';
 
-import styles from "./Customers.module.css";
+import styles from './Customers.module.css';
 
 // const DUMMY_CUSTOMERS = [
 //   { id: "c1", name: "Дмитрий" },
@@ -14,7 +14,7 @@ class Customers extends Component {
     super();
     this.state = {
       showCustomers: true,
-      someState: "Foo",
+      someState: 'Foo',
     };
   }
 
@@ -25,13 +25,13 @@ class Customers extends Component {
     //   // Обработка ошибки
     // }
     if (this.props.customers.length === 0) {
-      throw new Error("Нет заказчиков!");
+      throw new Error('Нема замовників!');
     }
   }
 
   toggleCustomersHandler() {
     // this.state.showCustomers = false; - НЕПРАВИЛЬНО!
-    this.setState((curState) => {
+    this.setState(curState => {
       return { showCustomers: !curState.showCustomers };
     });
   }
@@ -39,7 +39,7 @@ class Customers extends Component {
   render() {
     const customersList = (
       <ul>
-        {this.props.customers.map((customer) => (
+        {this.props.customers.map(customer => (
           <Customer key={customer.id} name={customer.name} />
         ))}
       </ul>
@@ -48,7 +48,7 @@ class Customers extends Component {
     return (
       <div className={styles.customers}>
         <button onClick={this.toggleCustomersHandler.bind(this)}>
-          {this.state.showCustomers ? "Спрятать" : "Показать"} Заказчиков
+          {this.state.showCustomers ? 'Сховати' : 'Показати'} Замовників
         </button>
         {this.state.showCustomers && customersList}
       </div>
